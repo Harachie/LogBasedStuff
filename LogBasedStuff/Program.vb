@@ -1,13 +1,16 @@
 ﻿Module Program
 
     Sub Main()
-        Dim emailLog As New Log("email")
+        Dim emailingsLog As New Log("emailings")
+        Dim emailingsConsumer As New Consumer("emailings", emailingsLog)
+        '   Dim consumerLog As New Log("consumers")
+        '  Dim mailing As New ElectronicMailing With {.Template = "VutexInfoMail", .Filter = "InterestedInVutex"}
+        '    Dim command As New Command With {.CommandType = Command.CommandTypeE.SendElectronicMailing, .State = mailing}
 
-        emailLog.InitializeAsync().Wait()
-        emailLog.Write("1").Wait()
-        emailLog.Write("ä").Wait()
-        emailLog.Write("ö").Wait()
-        emailLog.Write("ü").Wait()
+        emailingsLog.InitializeAsync().Wait()
+        emailingsConsumer.ExecuteAsync.Wait()
+
+        '   emailingsLog.Write(command.Serialize)
     End Sub
 
 End Module
