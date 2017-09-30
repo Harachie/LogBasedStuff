@@ -4,7 +4,7 @@
     Public Property Template As String
     Public Property Filter As String
 
-    Public Function InsertAsync() As Task
+    Public Function InsertAsync() As Task(Of Long)
         Return Task.CompletedTask
     End Function
 
