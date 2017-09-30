@@ -5,7 +5,7 @@
     Public Property Filter As String
 
     Public Function InsertAsync() As Task
-        Return Task.completed
+        Return Task.CompletedTask
     End Function
 
 End Class
